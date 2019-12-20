@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --port 8200",
     "build": "webpack --config webpack.config.js",
-    "build:all": "npm run build && npm run build:micro-react && npm run build:micro-vue",
+    "start:all": "concurrently --kill-others --kill-others-on-fail \"npm run start:micro-vue\" \"npm run start:micro-react\" \"npm run start\"",
     "build:micro-react": "cd ./micro-react/ && npm run build",
     "build:micro-vue": "cd ./micro-vue/ && npm run build",
     "build:micro-angular": "cd ./micro-angylar/ && npm run build",
