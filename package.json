@@ -7,12 +7,16 @@
     "start": "webpack-dev-server --open --port 8200",
     "build": "webpack --config webpack.config.js",
     "start:all": "concurrently --kill-others --kill-others-on-fail \"npm run start:micro-vue\" \"npm run start:micro-react\" \"npm run start\"",
+    "install:all": "npm run install:micro-vue && npm run install:micro-react && npm install",
     "build:micro-react": "cd ./micro-react/ && npm run build",
     "build:micro-vue": "cd ./micro-vue/ && npm run build",
     "build:micro-angular": "cd ./micro-angylar/ && npm run build",
     "start:micro-react": "cd ./micro-react/ && npm start",
     "start:micro-vue": "cd ./micro-vue/ && npm start",
-    "start:micro-angular": "cd ./micro-angylar/ && npm start"
+    "start:micro-angular": "cd ./micro-angylar/ && npm start",
+    "install:micro-react": "cd ./micro-react/ && npm i",
+    "install:micro-vue": "cd ./micro-vue/ && npm i",
+    "install:micro-angular": "cd ./micro-angylar/ && npm i"
   },
   "keywords": [],
   "author": "",
